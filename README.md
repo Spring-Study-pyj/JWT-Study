@@ -1,9 +1,13 @@
-## 중요
-한번에 모든 코드를 이해하려고 하면 오히려 복잡해지면서 헷갈리게 된다.
+# 중요
+한번에 모든 코드를 이해하려고 하면 오히려 복잡해지니 항상 문제를 쪼개서 생각해야한다.
 
-## 코드 작성 flow
-1. 회원가입을 위해 User, CustomUserDetails를 작성
-2. 로그인시 Jwt가 필요하므로 JwtService(issueAccessToken) 작성
-3. 로그인 api 작성 후 jwt 응답
-4. test api 하나 만들어서 jwt 유효성 검사 진행하기 위해 jwtAuthenticationFilter 작성
-5. SecurityConfig에 filter 등록
+# 코드 작성 flow
+
+## 1. 로그인과 회원가입을 구현하기 위해선 token 생성만 있으면됨.
+- 로그인과 회원가입 api 그리고 토큰 생성 메서드만 작성
+
+## 2. 매 요청마다 토큰의 유효성 검사를 위해 jwtAuthenticationFiler를 작성
+
+## 3. SecurityConfig에 필터 등록하고 test api 작성후 테스트 진행
+
+## 4. 예외 처리를 위한 핸들러 추가.
